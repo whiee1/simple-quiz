@@ -6,7 +6,7 @@ let theQuestions = [
        b: "Green",
        c: "Blue"
      },
-     correctAnswer: "a"
+     correct: "a"
   },
   {
    question: "2. What is the color of the sun?",
@@ -15,7 +15,7 @@ let theQuestions = [
      b: "Green",
      c: "Blue"
    },
-   correctAnswer: "a"
+   correct: "a"
   },
   {
    question: "3. What is the color of the sun?",
@@ -24,7 +24,7 @@ let theQuestions = [
      b: "Green",
      c: "Blue"
    },
-   correctAnswer: "a"
+   correct: "a"
   },
   {
    question: "4. What is the color of the sun?",
@@ -33,7 +33,7 @@ let theQuestions = [
      b: "Green",
      c: "Blue"
    },
-   correctAnswer: "a"
+   correct: "a"
   },
   {
    question: "5. What is the color of the sun?",
@@ -42,7 +42,7 @@ let theQuestions = [
      b: "Green",
      c: "Blue"
    },
-   correctAnswer: "a"
+   correct: "a"
   },
   {
    question: "6. What is the color of the sun?",
@@ -51,7 +51,7 @@ let theQuestions = [
      b: "Green",
      c: "Blue"
    },
-   correctAnswer: "a"
+   correct: "a"
   },
   {
    question: "7. What is the color of the sun?",
@@ -60,7 +60,7 @@ let theQuestions = [
      b: "Green",
      c: "Blue"
    },
-   correctAnswer: "a"
+   correct: "a"
   },
   {
    question: "8. What is the color of the sun?",
@@ -69,7 +69,7 @@ let theQuestions = [
      b: "Green",
      c: "Blue"
    },
-   correctAnswer: "a"
+   correct: "a"
   },
   {
    question: "9. What is the color of the sun?",
@@ -78,16 +78,7 @@ let theQuestions = [
      b: "Green",
      c: "Blue"
    },
-   correctAnswer: "a"
-  },
-  {
-   question: "10. What is the color of the sun?",
-   answers: {
-     a: "Yellow",
-     b: "Green",
-     c: "Blue"
-   },
-   correctAnswer: "a"
+   correct: "a"
   }
  ];
 
