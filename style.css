@@ -1,0 +1,9 @@
+body {
+  background-color: white;
+  color: black;
+  font-family:  monospace;
+}
+.darkMode {
+  background-color: rgb(1, 6, 26);
+  color: white;
+}
