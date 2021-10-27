@@ -87,6 +87,48 @@ changeMode = () => {
   document.body.classList.toggle("darkMode");
 };
 
+let theQuiz = document.querySelector("#quiz")
+let results = document.querySelector("#results");
+let checkAnswersButton = document.querySelector("#check");
+
+//skriv ut frågor och svarsalternativ
+let quiz = () => {
+  let output = []; 
+  theQuestions.forEach((item, index) => {
+    let options = [];
+    for(letter in item.answers){
+      //skapa en radio button för varje svarsalternativ
+      options.push(`<lable><input type="radio" name="answerOption${index}"value="${letter}">
+        ${item.answers[letter]}
+      </lable>`
+      ); 
+    }
+    //lägg till fråga och svarsalternativ till output []
+    output.push(`<h2 class="question"> ${item.question} </h2>
+    <div class="answers"> ${options.join("")} </div>`
+    ); 
+  })
+  //gör output array till string och visa i browsern
+  theQuiz.innerHTML = output.join("");
+}  
+
+
+let checkAnswers = () =>{
+
+  let count = 0; //räknar poäng
+    theQuestions.forEach((item, index) => {
+      let selectedButton = `input[name=answerOption${index}]:checked`;
+      let usersAnswer = (document.querySelector(selectedButton) || {}).value; //||{} = eller tomt object för att inte få error om användaren inte klickar i ett svar 
+      if(usersAnswer === item.correct){
+        count++;
+      }
+  })
+  results.innerText = `You got ${count} point out of ${theQuestions.length} `;
+};
+
+  quiz();
+  checkAnswersButton.addEventListener("click", checkAnswers);
+
 //Knapp för att ladda om sidan
 let start = document.querySelector("#start");
 start.addEventListener("click", () => 
