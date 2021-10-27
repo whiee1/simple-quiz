@@ -7,3 +7,12 @@ body {
   background-color: rgb(1, 6, 26);
   color: white;
 }
+#results {
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  text-decoration: underline;
+}
+button {
+  margin: 15px;
+}
