@@ -1,82 +1,82 @@
 let theQuestions = [
   {
-     question: "1. What is the color of the sun?",
+     question: "1. What does “www” stand for in a website browser?",
      answers: {
-       a: "Yellow",
-       b: "Green",
-       c: "Blue"
+       a: "whole wide world",
+       b: "world wide web",
+       c: "world with window"
      },
-     correct: "a"
+     correct: "b"
   },
   {
-   question: "2. What is the color of the sun?",
+   question: "2. How many teeth do adult humans have?",
    answers: {
-     a: "Yellow",
-     b: "Green",
-     c: "Blue"
+     a: "26",
+     b: "32",
+     c: "38"
+   },
+   correct: "b"
+  },
+  {
+   question: "3. Which planet is closest to the sun?",
+   answers: {
+     a: "Mercury",
+     b: "Venus",
+     c: "Mars"
    },
    correct: "a"
   },
   {
-   question: "3. What is the color of the sun?",
+   question: "4. Wich of these categories does olives belong to?",
    answers: {
-     a: "Yellow",
-     b: "Green",
-     c: "Blue"
+     a: "Fruits",
+     b: "Vegetables",
+     c: "Berries"
+   },
+   correct: "c"
+  },
+  {
+   question: "5. What is the biggest animal in the world?",
+   answers: {
+     a: "Elephant",
+     b: "Giraffe",
+     c: "Blue whale"
+   },
+   correct: "c"
+  },
+  {
+   question: "6. Which animal can be seen on the Porsche logo?",
+   answers: {
+     a: "Tiger",
+     b: "Horse",
+     c: "Elephant"
+   },
+   correct: "b"
+  },
+  {
+   question: "7. Who was the first woman to win a Nobel Prize?",
+   answers: {
+     a: "Marie Curie",
+     b: "Emily Greene Balch",
+     c: "Grazia Deledda"
    },
    correct: "a"
   },
   {
-   question: "4. What is the color of the sun?",
+   question: "8. What is the name of the largest ocean on earth?",
    answers: {
-     a: "Yellow",
-     b: "Green",
-     c: "Blue"
+     a: "Atlantic Ocean",
+     b: "Indian Ocean",
+     c: "Pacific Ocean"
    },
-   correct: "a"
+   correct: "c"
   },
   {
-   question: "5. What is the color of the sun?",
+   question: "9. How many hearts does an octopus have?",
    answers: {
-     a: "Yellow",
-     b: "Green",
-     c: "Blue"
-   },
-   correct: "a"
-  },
-  {
-   question: "6. What is the color of the sun?",
-   answers: {
-     a: "Yellow",
-     b: "Green",
-     c: "Blue"
-   },
-   correct: "a"
-  },
-  {
-   question: "7. What is the color of the sun?",
-   answers: {
-     a: "Yellow",
-     b: "Green",
-     c: "Blue"
-   },
-   correct: "a"
-  },
-  {
-   question: "8. What is the color of the sun?",
-   answers: {
-     a: "Yellow",
-     b: "Green",
-     c: "Blue"
-   },
-   correct: "a"
-  },
-  {
-   question: "9. What is the color of the sun?",
-   answers: {
-     a: "Yellow",
-     b: "Green",
-     c: "Blue"
+     a: "3",
+     b: "2",
+     c: "4"
    },
    correct: "a"
   }
@@ -85,6 +85,7 @@ let theQuestions = [
  // Klicka på knapp för att ändra mode
  changeMode = () => {
    document.body.classList.toggle("darkMode");
+
  };
  
  let theQuiz = document.querySelector("#quiz")
@@ -120,7 +121,7 @@ let theQuestions = [
 
  let checkAnswers = () =>{
    //välj alla div med class="answers"
-   let ansOpt = theQuiz.querySelectorAll(".answers"); 
+   let ansOpt = document.querySelectorAll(".answers"); 
    let count = 0; //räknar poäng
    if(box1.checked && box3.checked && box2.checked === false){
      boxContainer.style.color = "green";
@@ -143,10 +144,8 @@ let theQuestions = [
      results.style.color = "green";
     } else if (count > numOfQ *0.5){
      results.style.color = "orange";
-    } else {
-     results.style.color = "black";
     }
-   results.innerText = `You got ${count} point out of ${numOfQ} `;
+   results.innerText = `You got ${count} point out of ${numOfQ}! `;
  };
  quiz();
  checkAnswersButton.addEventListener("click", checkAnswers);

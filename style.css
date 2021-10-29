@@ -1,18 +1,60 @@
+
 body {
   background-color: white;
   color: black;
   font-family:  monospace;
+  display: flex;
+  justify-content: center;
 }
+#container{
+  width: 700px;
+  border: 3px solid;
+  border-radius: 50px;
+  text-align: center;
+}
+
 .darkMode {
   background-color: rgb(1, 6, 26);
   color: white;
+}
+h1{
+  font-size: 40px;
+  margin-top: 30px;
+  margin-bottom: 0;
+  text-shadow: 3px 3px 4px rgb(98, 156, 243), 0 0 5px rgb(11, 69, 155);
+}
+h2 {
+  margin: 5px;
+}
+.answers {
+  display: flex;
+  justify-content:space-evenly;
+  margin-bottom: 25px;
+}
+
+label{
+  justify-content: space-evenly;
 }
 #results {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
-  text-decoration: underline;
+  padding-bottom: 20px;
+  text-shadow: 3px 3px 4px rgb(98, 156, 243), 0 0 5px rgb(11, 69, 155); 
 }
 button {
-  margin: 15px;
+  margin: 20px;
+  box-shadow: 2px 4px 6px rgb(11, 69, 155);
+  padding: 20px;
+  border-radius: 10px;
+}
+#boxQuestion {
+  margin: 5px;
+}
+.b {
+  margin: 0 10%;
+}
+#box{
+  margin-bottom:30px ;
+  white-space: nowrap;
 }
